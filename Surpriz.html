@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprizë për Dashurinë Time</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #EE5A24;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #FF69B4;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surprizë për Dashurinë Time</h1>
+        <div class="button-container">
+            <button class="button" onclick="showLoveMessage()">Kliko për një mesazh dashurie</button>
+            <button class="button" onclick="showAdditionalMessage()">Kliko për një surprizë tjetër</button>
+        </div>
+        <p id="message1" class="hidden">Kur të shikoj, bota rrotullohet në ngjyra më të bukura. Sytë e tu janë si yjet që ndriçojnë natën time, duke më udhëzuar në rrugën e dashurisë sate. Të dua përjetësisht!</p>
+        <p id="message2" class="hidden">Ti je thelbi i zemrës sime dhe mrekullia që mbush jetën time me dritë. Me ty, çdo ditë është një aventurë e paharrueshme e dashurisë dhe lumturisë. Të dua pafundësisht!</p>
+    </div>
+    <script>
+        function showLoveMessage() {
+            document.getElementById('message1').classList.add('visible');
+            document.getElementById('message2').classList.remove('visible');
+        }
+
+        function showAdditionalMessage() {
+            document.getElementById('message2').classList.add('visible');
+            document.getElementById('message1').classList.remove('visible');
+        }
+    </script>
+</body>
+</html>
